@@ -463,7 +463,7 @@ grouped_school_data_df = pd.DataFrame({"Total Students":total_students_grp,
                                        "Average Math Score": avgmathscore_grp,
                                        "Average Reading Score": avgreadingscore_grp,   
                                        "% Passing Math":passingmath_grp,
-                                       "% Passing Reading":passingmath_grp,
+                                       "% Passing Reading":passingreading_grp,
                                         "%Overall Passing Rate":overallpassrate_grp          
                                     
                                       
@@ -475,7 +475,7 @@ grouped_school_data_df = grouped_school_data_df[[  "Total Students",
     "Average Math Score",
     "Average Reading Score",
      "% Passing Math",   
-     "% Passing Math",                                             
+     "% Passing Reading",                                             
     "%Overall Passing Rate"]]
 
 
@@ -514,7 +514,7 @@ grouped_school_data_df.head(10)
       <th>Average Math Score</th>
       <th>Average Reading Score</th>
       <th>% Passing Math</th>
-      <th>% Passing Math</th>
+      <th>% Passing Reading</th>
       <th>%Overall Passing Rate</th>
     </tr>
     <tr>
@@ -540,7 +540,7 @@ grouped_school_data_df.head(10)
       <td>77.048432</td>
       <td>81.033963</td>
       <td>5.698553</td>
-      <td>5.698553</td>
+      <td>6.531350</td>
       <td>79.041198</td>
     </tr>
     <tr>
@@ -552,7 +552,7 @@ grouped_school_data_df.head(10)
       <td>83.061895</td>
       <td>83.975780</td>
       <td>15.261572</td>
-      <td>15.261572</td>
+      <td>17.491927</td>
       <td>83.518837</td>
     </tr>
     <tr>
@@ -564,7 +564,7 @@ grouped_school_data_df.head(10)
       <td>76.711767</td>
       <td>81.158020</td>
       <td>9.615463</td>
-      <td>9.615463</td>
+      <td>11.020685</td>
       <td>78.934893</td>
     </tr>
     <tr>
@@ -576,7 +576,7 @@ grouped_school_data_df.head(10)
       <td>77.102592</td>
       <td>80.746258</td>
       <td>10.352683</td>
-      <td>10.352683</td>
+      <td>11.865644</td>
       <td>78.924425</td>
     </tr>
     <tr>
@@ -588,7 +588,7 @@ grouped_school_data_df.head(10)
       <td>83.351499</td>
       <td>83.816757</td>
       <td>19.316076</td>
-      <td>19.316076</td>
+      <td>22.138965</td>
       <td>83.584128</td>
     </tr>
     <tr>
@@ -600,7 +600,7 @@ grouped_school_data_df.head(10)
       <td>77.289752</td>
       <td>80.934412</td>
       <td>6.117799</td>
-      <td>6.117799</td>
+      <td>7.011866</td>
       <td>79.112082</td>
     </tr>
     <tr>
@@ -612,7 +612,7 @@ grouped_school_data_df.head(10)
       <td>83.803279</td>
       <td>83.814988</td>
       <td>66.407494</td>
-      <td>66.407494</td>
+      <td>76.112412</td>
       <td>83.809133</td>
     </tr>
     <tr>
@@ -624,7 +624,7 @@ grouped_school_data_df.head(10)
       <td>76.629414</td>
       <td>81.182722</td>
       <td>9.720946</td>
-      <td>9.720946</td>
+      <td>11.141584</td>
       <td>78.906068</td>
     </tr>
     <tr>
@@ -636,7 +636,7 @@ grouped_school_data_df.head(10)
       <td>77.072464</td>
       <td>80.966394</td>
       <td>5.955892</td>
-      <td>5.955892</td>
+      <td>6.826297</td>
       <td>79.019429</td>
     </tr>
     <tr>
@@ -648,7 +648,7 @@ grouped_school_data_df.head(10)
       <td>83.839917</td>
       <td>84.044699</td>
       <td>29.476091</td>
-      <td>29.476091</td>
+      <td>33.783784</td>
       <td>83.942308</td>
     </tr>
   </tbody>
@@ -696,7 +696,7 @@ Top_schools.head()
       <th>Average Math Score</th>
       <th>Average Reading Score</th>
       <th>% Passing Math</th>
-      <th>% Passing Math</th>
+      <th>% Passing Reading</th>
       <th>%Overall Passing Rate</th>
     </tr>
     <tr>
@@ -722,7 +722,7 @@ Top_schools.head()
       <td>83.839917</td>
       <td>84.044699</td>
       <td>29.476091</td>
-      <td>29.476091</td>
+      <td>33.783784</td>
       <td>83.942308</td>
     </tr>
     <tr>
@@ -734,7 +734,7 @@ Top_schools.head()
       <td>83.682222</td>
       <td>83.955000</td>
       <td>15.753333</td>
-      <td>15.753333</td>
+      <td>18.055556</td>
       <td>83.818611</td>
     </tr>
     <tr>
@@ -746,7 +746,7 @@ Top_schools.head()
       <td>83.803279</td>
       <td>83.814988</td>
       <td>66.407494</td>
-      <td>66.407494</td>
+      <td>76.112412</td>
       <td>83.809133</td>
     </tr>
     <tr>
@@ -758,7 +758,7 @@ Top_schools.head()
       <td>83.418349</td>
       <td>83.848930</td>
       <td>17.343119</td>
-      <td>17.343119</td>
+      <td>19.877676</td>
       <td>83.633639</td>
     </tr>
     <tr>
@@ -770,7 +770,7 @@ Top_schools.head()
       <td>83.274201</td>
       <td>83.989488</td>
       <td>12.420499</td>
-      <td>12.420499</td>
+      <td>14.235655</td>
       <td>83.631844</td>
     </tr>
   </tbody>
@@ -818,7 +818,7 @@ Bottom_schools.head()
       <th>Average Math Score</th>
       <th>Average Reading Score</th>
       <th>% Passing Math</th>
-      <th>% Passing Math</th>
+      <th>% Passing Reading</th>
       <th>%Overall Passing Rate</th>
     </tr>
     <tr>
@@ -844,7 +844,7 @@ Bottom_schools.head()
       <td>76.842711</td>
       <td>80.744686</td>
       <td>7.090773</td>
-      <td>7.090773</td>
+      <td>8.127032</td>
       <td>78.793698</td>
     </tr>
     <tr>
@@ -856,7 +856,7 @@ Bottom_schools.head()
       <td>76.629414</td>
       <td>81.182722</td>
       <td>9.720946</td>
-      <td>9.720946</td>
+      <td>11.141584</td>
       <td>78.906068</td>
     </tr>
     <tr>
@@ -868,7 +868,7 @@ Bottom_schools.head()
       <td>77.102592</td>
       <td>80.746258</td>
       <td>10.352683</td>
-      <td>10.352683</td>
+      <td>11.865644</td>
       <td>78.924425</td>
     </tr>
     <tr>
@@ -880,7 +880,7 @@ Bottom_schools.head()
       <td>76.711767</td>
       <td>81.158020</td>
       <td>9.615463</td>
-      <td>9.615463</td>
+      <td>11.020685</td>
       <td>78.934893</td>
     </tr>
     <tr>
@@ -892,7 +892,7 @@ Bottom_schools.head()
       <td>77.072464</td>
       <td>80.966394</td>
       <td>5.955892</td>
-      <td>5.955892</td>
+      <td>6.826297</td>
       <td>79.019429</td>
     </tr>
   </tbody>
@@ -1243,31 +1243,267 @@ students_gr_grade_df
 
 ```python
 # Sample bins. Feel free to create your own bins.
-spending_bins = [0, 585, 615, 645, 675]
-group_names = ["<$585", "$585-615", "$615-645", "$645-675"]
+# spending_bins = [0, 585, 615, 645, 675]
+# group_names = ["<$585", "$585-615", "$615-645", "$645-675"]
+# bins=[575,600,625,650,675]
+# bin_names=["575 to 600","600 to 625","625 to 650","650 to 675"]
 ```
 
 
 ```python
-per student budget
+grouped_school_data_dfbn = grouped_school_data_df.copy()
+#grouped_school_data_dfbn.head()
 
-ins=[575,600,625,650,675]
-binnames=["575 to 600","600 to 625","625 to 650","650 to 675"]
-School_summary_df2["Spending ranges Per student"] = pd.cut(School_summary_df2["Per Student Budget"],bins,labels=binnames)
-
-df = whatever cols needed
-School_summary_df = School_summary_df2[["Average Math Score","Average Reading Score","% Passing Math","% Passing Reading",
-                                      "Overall Passing Rate", "Spending ranges Per student"]]
-School_summary_df = School_summary_df3.groupby('Spending ranges Per student')
 
 ```
 
 
-      File "<ipython-input-14-cff1499cf0d4>", line 1
-        per student budget
-                  ^
-    SyntaxError: invalid syntax
+```python
+grouped_school_data_df3 = grouped_school_data_dfbn[["Per Student Budget","Average Math Score","Average Reading Score","% Passing Math","% Passing Reading",
+                                     "%Overall Passing Rate"]]
+grouped_school_data_df3.head()
+
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Per Student Budget</th>
+      <th>Average Math Score</th>
+      <th>Average Reading Score</th>
+      <th>% Passing Math</th>
+      <th>% Passing Reading</th>
+      <th>%Overall Passing Rate</th>
+    </tr>
+    <tr>
+      <th>school name</th>
+      <th>type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bailey High School</th>
+      <th>District</th>
+      <td>$628.00</td>
+      <td>77.048432</td>
+      <td>81.033963</td>
+      <td>5.698553</td>
+      <td>6.531350</td>
+      <td>79.041198</td>
+    </tr>
+    <tr>
+      <th>Cabrera High School</th>
+      <th>Charter</th>
+      <td>$582.00</td>
+      <td>83.061895</td>
+      <td>83.975780</td>
+      <td>15.261572</td>
+      <td>17.491927</td>
+      <td>83.518837</td>
+    </tr>
+    <tr>
+      <th>Figueroa High School</th>
+      <th>District</th>
+      <td>$639.00</td>
+      <td>76.711767</td>
+      <td>81.158020</td>
+      <td>9.615463</td>
+      <td>11.020685</td>
+      <td>78.934893</td>
+    </tr>
+    <tr>
+      <th>Ford High School</th>
+      <th>District</th>
+      <td>$644.00</td>
+      <td>77.102592</td>
+      <td>80.746258</td>
+      <td>10.352683</td>
+      <td>11.865644</td>
+      <td>78.924425</td>
+    </tr>
+    <tr>
+      <th>Griffin High School</th>
+      <th>Charter</th>
+      <td>$625.00</td>
+      <td>83.351499</td>
+      <td>83.816757</td>
+      <td>19.316076</td>
+      <td>22.138965</td>
+      <td>83.584128</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# grouped_school_data_df3["Per Student Budget"].astype(int)
+# grouped_school_data_df3.head()
+```
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-85-3c8ccd84d6e6> in <module>()
+    ----> 1 grouped_school_data_df3["Per Student Budget"].astype(int)
+          2 grouped_school_data_df3.head()
     
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\util\_decorators.py in wrapper(*args, **kwargs)
+        116                 else:
+        117                     kwargs[new_arg_name] = new_arg_value
+    --> 118             return func(*args, **kwargs)
+        119         return wrapper
+        120     return _deprecate_kwarg
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\generic.py in astype(self, dtype, copy, errors, **kwargs)
+       4002         # else, only a single dtype is given
+       4003         new_data = self._data.astype(dtype=dtype, copy=copy, errors=errors,
+    -> 4004                                      **kwargs)
+       4005         return self._constructor(new_data).__finalize__(self)
+       4006 
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\internals.py in astype(self, dtype, **kwargs)
+       3460 
+       3461     def astype(self, dtype, **kwargs):
+    -> 3462         return self.apply('astype', dtype=dtype, **kwargs)
+       3463 
+       3464     def convert(self, **kwargs):
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\internals.py in apply(self, f, axes, filter, do_integrity_check, consolidate, **kwargs)
+       3327 
+       3328             kwargs['mgr'] = self
+    -> 3329             applied = getattr(b, f)(**kwargs)
+       3330             result_blocks = _extend_blocks(applied, result_blocks)
+       3331 
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\internals.py in astype(self, dtype, copy, errors, values, **kwargs)
+        542     def astype(self, dtype, copy=False, errors='raise', values=None, **kwargs):
+        543         return self._astype(dtype, copy=copy, errors=errors, values=values,
+    --> 544                             **kwargs)
+        545 
+        546     def _astype(self, dtype, copy=False, errors='raise', values=None,
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\internals.py in _astype(self, dtype, copy, errors, values, klass, mgr, **kwargs)
+        623 
+        624                 # _astype_nansafe works fine with 1-d only
+    --> 625                 values = astype_nansafe(values.ravel(), dtype, copy=True)
+        626                 values = values.reshape(self.shape)
+        627 
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\dtypes\cast.py in astype_nansafe(arr, dtype, copy)
+        690     elif arr.dtype == np.object_ and np.issubdtype(dtype.type, np.integer):
+        691         # work around NumPy brokenness, #1987
+    --> 692         return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+        693 
+        694     if dtype.name in ("datetime64", "timedelta64"):
+    
+
+    pandas/_libs/lib.pyx in pandas._libs.lib.astype_intsafe()
+    
+
+    pandas/_libs/src/util.pxd in util.set_value_at_unsafe()
+    
+
+    ValueError: invalid literal for int() with base 10: '$628.00'
+
+
+
+```python
+grouped_school_data_dfbn.dtypes
+```
+
+
+
+
+    Total Students             int64
+    Total School Budget       object
+    Per Student Budget        object
+    Average Math Score       float64
+    Average Reading Score    float64
+    % Passing Math           float64
+    % Passing Reading        float64
+    %Overall Passing Rate    float64
+    dtype: object
+
+
+
+
+```python
+bins=[0,575,600,625,650,675]
+bin_names = ["$0 to $575", "$575 to $600","$600 to $625","$625 to $650","$650 to $675"]
+grouped_school_data_df3["Spending ranges Per Student"] = pd.cut(grouped_school_data_df3["Per Student Budget"], bins =bins, labels=bin_names)
+
+
+grouped_school_data_df_bgt = grouped_school_data_df3.groupby('Spending ranges (Per student)')
+grouped_school_data_df_bgt
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-88-dfb359bf2952> in <module>()
+          1 bins=[0,575,600,625,650,675]
+          2 bin_names = ["$0 to $575", "$575 to $600","$600 to $625","$625 to $650","$650 to $675"]
+    ----> 3 grouped_school_data_df3["Spending ranges Per Student"] = pd.cut(grouped_school_data_df3["Per Student Budget"], bins =bins, labels=bin_names)
+          4 
+          5 
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\reshape\tile.py in cut(x, bins, right, labels, retbins, precision, include_lowest)
+        134                               precision=precision,
+        135                               include_lowest=include_lowest,
+    --> 136                               dtype=dtype)
+        137 
+        138     return _postprocess_for_cut(fac, bins, retbins, x_is_series,
+    
+
+    C:\Anaconda3\envs\PythonData\lib\site-packages\pandas\core\reshape\tile.py in _bins_to_cuts(x, bins, right, labels, precision, include_lowest, dtype, duplicates)
+        237 
+        238     side = 'left' if right else 'right'
+    --> 239     ids = _ensure_int64(bins.searchsorted(x, side=side))
+        240 
+        241     if include_lowest:
+    
+
+    TypeError: '<' not supported between instances of 'int' and 'str'
 
 
 ## Scores by School Size
@@ -1277,10 +1513,48 @@ School_summary_df = School_summary_df3.groupby('Spending ranges Per student')
 
 ```python
 # Sample bins. Feel free to create your own bins.
-size_bins = [0, 1000, 2000, 5000]
-group_names = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
+bins = [0, 1000, 2000, 5000]
+size_names = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
+```
+
+
+```python
+grouped_school_data_dfbn["Scores by School Size"] = pd.cut(grouped_school_data_dfbn["Total Students"], bins =bins, labels=size_names)
+grouped_school_data_df4 = grouped_school_data_df3.groupby('Scores by School Size')
+
+
+grouped_school_data_df4 = grouped_school_data_dfbn[["Total Students","Average Math Score","Average Reading Score","% Passing Math","% Passing Reading",
+                                     "%Overall Passing Rate"]]
+
+
+grouped_school_data_df4.max()
 ```
 
 ## Scores by School Type
 
 * Perform the same operations as above, based on school type.
+
+
+```python
+grouped_school_data_dfbn["Scores by School Type"] = pd.cut(grouped_school_data_dfbn["type"], bins =bins, labels=type_names)
+grouped_school_data_df5 = grouped_school_data_df3.groupby('Scores by School Type')
+
+
+grouped_school_data_df5 = grouped_school_data_dfbn[["Type","Average Math Score","Average Reading Score","% Passing Math","% Passing Reading",
+                                     "%Overall Passing Rate"]]
+
+
+grouped_school_data_df5.max()
+```
+
+
+```python
+# My Analysis
+
+# As a whole, charter schools are definitely top performers as compared to disctrict schools. The data analysis of 
+# top and bottom 5 schools clearly indicate the trend. 
+
+# Overall, the average math and average reading scores, for grades 9th, 10th, 11th and 12th do not show a disparity.
+# The student have consistent performance levels for both math and reading. For ex:Bailey High school
+# avg math score for 10th grade is 76.99 and avg reading scores is 80.80.
+```
