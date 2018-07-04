@@ -447,13 +447,25 @@ total_budget_sch_wise.head()
 
 
 ```python
+15549641728/3124928
+```
+
+
+
+
+    4976.0
+
+
+
+
+```python
 
 grouped_school_data = school_data_complete_new.groupby(['school name', "type"])
 # grouped_school_data.drop_duplicates(subset=[budget], keep=False)
 
 
 total_students_grp = grouped_school_data["Student ID"].count()
-total_budget_grp = school_df["budget"].sum()
+total_budget_grp = grouped_school_data["budget"].sum()
 # total_budget_grp = grouped_school_data["budget"].sum()
 per_stu_budget_grp =  (total_budget_grp/ total_students_grp)/100
 avgmathscore_grp = grouped_school_data["math_score"].mean()
@@ -541,8 +553,8 @@ grouped_school_data_df.head(10)
       <th>Bailey High School</th>
       <th>District</th>
       <td>4976</td>
-      <td>24649428</td>
-      <td>49.536632</td>
+      <td>15549641728</td>
+      <td>31249.28</td>
       <td>77.048432</td>
       <td>81.033963</td>
       <td>569.855305</td>
@@ -553,8 +565,8 @@ grouped_school_data_df.head(10)
       <th>Cabrera High School</th>
       <th>Charter</th>
       <td>1858</td>
-      <td>24649428</td>
-      <td>132.666459</td>
+      <td>2009159448</td>
+      <td>10813.56</td>
       <td>83.061895</td>
       <td>83.975780</td>
       <td>1526.157158</td>
@@ -565,8 +577,8 @@ grouped_school_data_df.head(10)
       <th>Figueroa High School</th>
       <th>District</th>
       <td>2949</td>
-      <td>24649428</td>
-      <td>83.585717</td>
+      <td>5557128039</td>
+      <td>18844.11</td>
       <td>76.711767</td>
       <td>81.158020</td>
       <td>961.546287</td>
@@ -577,8 +589,8 @@ grouped_school_data_df.head(10)
       <th>Ford High School</th>
       <th>District</th>
       <td>2739</td>
-      <td>24649428</td>
-      <td>89.994261</td>
+      <td>4831365924</td>
+      <td>17639.16</td>
       <td>77.102592</td>
       <td>80.746258</td>
       <td>1035.268346</td>
@@ -589,8 +601,8 @@ grouped_school_data_df.head(10)
       <th>Griffin High School</th>
       <th>Charter</th>
       <td>1468</td>
-      <td>24649428</td>
-      <td>167.911635</td>
+      <td>1346890000</td>
+      <td>9175.00</td>
       <td>83.351499</td>
       <td>83.816757</td>
       <td>1931.607629</td>
@@ -601,8 +613,8 @@ grouped_school_data_df.head(10)
       <th>Hernandez High School</th>
       <th>District</th>
       <td>4635</td>
-      <td>24649428</td>
-      <td>53.181074</td>
+      <td>14007062700</td>
+      <td>30220.20</td>
       <td>77.289752</td>
       <td>80.934412</td>
       <td>611.779935</td>
@@ -613,8 +625,8 @@ grouped_school_data_df.head(10)
       <th>Holden High School</th>
       <th>Charter</th>
       <td>427</td>
-      <td>24649428</td>
-      <td>577.269977</td>
+      <td>105933149</td>
+      <td>2480.87</td>
       <td>83.803279</td>
       <td>83.814988</td>
       <td>6640.749415</td>
@@ -625,8 +637,8 @@ grouped_school_data_df.head(10)
       <th>Huang High School</th>
       <th>District</th>
       <td>2917</td>
-      <td>24649428</td>
-      <td>84.502667</td>
+      <td>5573322295</td>
+      <td>19106.35</td>
       <td>76.629414</td>
       <td>81.182722</td>
       <td>972.094618</td>
@@ -637,8 +649,8 @@ grouped_school_data_df.head(10)
       <th>Johnson High School</th>
       <th>District</th>
       <td>4761</td>
-      <td>24649428</td>
-      <td>51.773636</td>
+      <td>14733628650</td>
+      <td>30946.50</td>
       <td>77.072464</td>
       <td>80.966394</td>
       <td>595.589162</td>
@@ -649,8 +661,8 @@ grouped_school_data_df.head(10)
       <th>Pena High School</th>
       <th>Charter</th>
       <td>962</td>
-      <td>24649428</td>
-      <td>256.231060</td>
+      <td>563595396</td>
+      <td>5858.58</td>
       <td>83.839917</td>
       <td>84.044699</td>
       <td>2947.609148</td>
@@ -723,8 +735,8 @@ Top_schools.head()
       <th>Pena High School</th>
       <th>Charter</th>
       <td>962</td>
-      <td>24649428</td>
-      <td>256.231060</td>
+      <td>563595396</td>
+      <td>5858.58</td>
       <td>83.839917</td>
       <td>84.044699</td>
       <td>2947.609148</td>
@@ -735,8 +747,8 @@ Top_schools.head()
       <th>Wright High School</th>
       <th>Charter</th>
       <td>1800</td>
-      <td>24649428</td>
-      <td>136.941267</td>
+      <td>1888920000</td>
+      <td>10494.00</td>
       <td>83.682222</td>
       <td>83.955000</td>
       <td>1575.333333</td>
@@ -747,8 +759,8 @@ Top_schools.head()
       <th>Holden High School</th>
       <th>Charter</th>
       <td>427</td>
-      <td>24649428</td>
-      <td>577.269977</td>
+      <td>105933149</td>
+      <td>2480.87</td>
       <td>83.803279</td>
       <td>83.814988</td>
       <td>6640.749415</td>
@@ -759,8 +771,8 @@ Top_schools.head()
       <th>Thomas High School</th>
       <th>Charter</th>
       <td>1635</td>
-      <td>24649428</td>
-      <td>150.761028</td>
+      <td>1705517550</td>
+      <td>10431.30</td>
       <td>83.418349</td>
       <td>83.848930</td>
       <td>1734.311927</td>
@@ -771,8 +783,8 @@ Top_schools.head()
       <th>Wilson High School</th>
       <th>Charter</th>
       <td>2283</td>
-      <td>24649428</td>
-      <td>107.969461</td>
+      <td>3012587442</td>
+      <td>13195.74</td>
       <td>83.274201</td>
       <td>83.989488</td>
       <td>1242.049934</td>
@@ -845,8 +857,8 @@ Bottom_schools.head()
       <th>Rodriguez High School</th>
       <th>District</th>
       <td>3999</td>
-      <td>24649428</td>
-      <td>61.638980</td>
+      <td>10186904637</td>
+      <td>25473.63</td>
       <td>76.842711</td>
       <td>80.744686</td>
       <td>709.077269</td>
@@ -857,8 +869,8 @@ Bottom_schools.head()
       <th>Huang High School</th>
       <th>District</th>
       <td>2917</td>
-      <td>24649428</td>
-      <td>84.502667</td>
+      <td>5573322295</td>
+      <td>19106.35</td>
       <td>76.629414</td>
       <td>81.182722</td>
       <td>972.094618</td>
@@ -869,8 +881,8 @@ Bottom_schools.head()
       <th>Ford High School</th>
       <th>District</th>
       <td>2739</td>
-      <td>24649428</td>
-      <td>89.994261</td>
+      <td>4831365924</td>
+      <td>17639.16</td>
       <td>77.102592</td>
       <td>80.746258</td>
       <td>1035.268346</td>
@@ -881,8 +893,8 @@ Bottom_schools.head()
       <th>Figueroa High School</th>
       <th>District</th>
       <td>2949</td>
-      <td>24649428</td>
-      <td>83.585717</td>
+      <td>5557128039</td>
+      <td>18844.11</td>
       <td>76.711767</td>
       <td>81.158020</td>
       <td>961.546287</td>
@@ -893,8 +905,8 @@ Bottom_schools.head()
       <th>Johnson High School</th>
       <th>District</th>
       <td>4761</td>
-      <td>24649428</td>
-      <td>51.773636</td>
+      <td>14733628650</td>
+      <td>30946.50</td>
       <td>77.072464</td>
       <td>80.966394</td>
       <td>595.589162</td>
